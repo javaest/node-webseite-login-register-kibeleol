@@ -46,7 +46,7 @@ app.get('/get-username', (req, res) => {
 });
 
 // Registrierungs-Handler
-app.post('/signin', (req, res) => {
+app.post('/signup', (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
