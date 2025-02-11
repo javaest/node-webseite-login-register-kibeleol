@@ -31,6 +31,11 @@ app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'login.html'));  // Senden der login.html-Seite
 });
 
+// Registrierungsseite
+app.get('/signin', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'signup.html'));
+});
+
 // API: Überprüft, ob der Benutzer angemeldet ist
 app.get('/get-username', (req, res) => {
   if (req.session.user) {
